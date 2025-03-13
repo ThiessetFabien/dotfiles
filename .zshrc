@@ -1,4 +1,6 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -11,11 +13,6 @@ if [[ ! $TMUX ]]; then
 fi
 
 # Neofetch autostart
-if [[ "$(ps -o comm= -p $PPID)" == "yakuake" ]]; then
-    neofetch
-fi
-
-# Execute Neofetch on Yakuake
 if [[ "$(ps -o comm= -p $PPID)" == "yakuake" ]]; then
     neofetch
 fi
@@ -91,7 +88,8 @@ COMPLETION_WAITING_DOTS="true"
 autoload -U compinit
 compinit
 
-setopt completinword
+setopt COMPLETE_IN_WORD
+setopt ALWAYS_TO_END
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -175,6 +173,3 @@ alias hg="history | grep -i"
 alias cat="bat --style=plain"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
