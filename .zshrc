@@ -155,7 +155,6 @@ alias cln="sudo paccache -r"
 
 alias ls="eza"
 alias lst="ls --tree"
-alias cat="bat --style=plain"
 
 alias tmux="TERM=xterm-256color tmux"
 alias vim="nvim"
