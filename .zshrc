@@ -158,6 +158,7 @@ alias lst="ls --tree"
 
 alias tmux="TERM=xterm-256color tmux"
 alias vim="nvim"
+alias crs="cursor ."
 
 alias ni="npm install"
 alias pi="pnpm install"
