@@ -12,11 +12,6 @@ if [[ ! $TMUX ]]; then
   exec tmux
 fi
 
-# Neofetch autostart
-if [[ "$(ps -o comm= -p $PPID)" == "yakuake" ]]; then
-    neofetch
-fi
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -114,6 +109,11 @@ export LC_ALL=en_US.UTF-8
 
 source $ZSH/oh-my-zsh.sh
 
+# Neofetch autostart
+if [[ "$(ps -o comm= -p $PPID)" == "yakuake" ]]; then
+    neofetch
+fi
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -148,16 +148,15 @@ alias test="npm run dev"
 alias ptest="pnpm run dev"
 alias build="npm run build"
 alias pbuild="pnpm run build"
-alias sup="sudo yay -Syu"
 
-alias up="yay -Syu"
+alias sup="sudo yay -Syyu"
+alias up="yay -Syyu"
 alias cln="sudo paccache -r"
 
 alias ls="eza"
 alias lst="ls --tree"
 
-alias tmux="TERM=xterm-256color tmux"
-alias vim="nvim"
+alias tmux="export TERM=xterm-256color && /usr/bin/tmux"
 alias crs="cursor ."
 alias lg="lazygit"
 alias cl="cursor . && lazygit"
@@ -174,5 +173,14 @@ alias ipa="ip -brief a"
 alias getip="wget http://checkip.dyndns.org/ -O - -o /dev/null | cut -d: -f 2 | cut -d\< -f 1 | sed 's/ //g'"
 alias hg="history | grep -i"
 alias cat="bat --style=plain"
+
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
+
+# pnpm
+export PNPM_HOME="/home/fabien/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
