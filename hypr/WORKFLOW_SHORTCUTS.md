@@ -1,20 +1,4 @@
-# 🚀 Raccourcis Hyprland - Workflow Développeur (Optimisation clavier)
-### **🎮 Gestion fenêtres Vim-style**
-- `SUPER + H/J/K/L` → Déplacer focus (gauche/bas/haut/droite)
-- `SUPER + Shift + H/J/K/L` → Déplacer fenêtre
-- `SUPER + Ctrl + H/J/K/L` → Redimensionner fenêtre
-- `SUPER + ;` → Toggle split (semicolon)
-- `SUPER + V` → Pseudo-tile mode
-- `SUPER + F` → Plein écran
-
-### **📱 Outils spécialisés (main droite)**
-- `SUPER + Z` → Docker Desktop
-- `SUPER + X` → Figma (app web)
-- `SUPER + C` → Color Picker (simple)
-- `SUPER + B` → Brave (browser principal)
-- `SUPER + N` → Obsidian (notes)
-- `SUPER + M` → Quitter Hyprland
-- `SUPER + /` → Verrouillage (hyprlock)r Web Mobile (Optimisés Clavier)
+# 🚀 Raccourcis Hyprland - Workflow Développeur Web Mobile (Multi-Moniteur)
 
 ## 📋 **Raccourcis ergonomiques optimisés :**
 
@@ -40,14 +24,32 @@
 ### **🎯 Actions fréquentes (centre clavier)**
 - `SUPER + G` → Color Picker (hex)
 - `SUPER + Shift + G` → Screenshot région
-- `SUPER + H` → Focus gauche (Vim-like)
-- `SUPER + J` → Focus bas (Vim-like)
-- `SUPER + K` → Focus haut (Vim-like)
-- `SUPER + L` → Focus droite (Vim-like)
+- `SUPER + ;` → Toggle split (semicolon)
+- `SUPER + ,` → Workspace précédent (virgule)
+- `SUPER + .` → Workspace suivant (point)
 
-### **� Gestion fenêtres Vim-style**
+### **🎮 Gestion fenêtres Vim-style**
 - `SUPER + H/J/K/L` → Déplacer focus (gauche/bas/haut/droite)
 - `SUPER + Shift + H/J/K/L` → Déplacer fenêtre
+- `SUPER + Ctrl + H/J/K/L` → Redimensionner fenêtre
+- `SUPER + V` → Pseudo-tile mode
+- `SUPER + Arrows` → Déplacer focus (backup)
+- `SUPER + Shift + Arrows` → Déplacer fenêtre (backup)
+
+### **📱 Outils spécialisés (main droite)**
+- `SUPER + Z` → Docker Desktop
+- `SUPER + X` → Figma (app web)
+- `SUPER + C` → Color Picker (simple)
+- `SUPER + B` → Brave (browser principal)
+- `SUPER + N` → Obsidian (notes)
+- `SUPER + M` → Quitter Hyprland
+- `SUPER + /` → Verrouillage (hyprlock)
+
+### **🖥️ Gestion multi-moniteur (NOUVEAU)**
+- `SUPER + Shift + O` → Déplacer fenêtre vers moniteur suivant
+- `SUPER + Shift + P` → Déplacer fenêtre vers moniteur précédent
+- `SUPER + Ctrl + O` → Déplacer workspace vers moniteur suivant
+- `SUPER + Ctrl + P` → Déplacer workspace vers moniteur précédent
 - `SUPER + Ctrl + H/J/K/L` → Redimensionner fenêtre
 - `SUPER + ;` → Toggle split
 - `SUPER + V` → Pseudo-tile mode
@@ -103,44 +105,50 @@
 - `SUPER + Right Mouse Drag` → Redimensionner
 - `SUPER + Scroll` → Changer workspace
 
-## 🎨 **Organisation automatique :**
+## 🎨 **Organisation multi-moniteur des Workspaces :**
 
-### **Auto-assignment des applications (démarrage automatique) :**
-- **Workspace 1 💻** : VS Code
-- **Workspace 2 🌐** : Brave (session restaurée)
-- **Workspace 4 🖥️** : Kitty (terminal)
-- **Workspace 6 📚** : Obsidian (notes)
-- **Workspace 7 🎨** : Draw.io (design)
-- **Workspace 8 💬** : Discord (communication)
+### 🖥️ Configuration des écrans et Workspaces :
+- **Workspace 1 (Laptop eDP-1 - 1600x900)** : Navigation web (Brave, Firefox), AI Studio, Obsidian (Notes & documentation).
+- **Workspace 2 (Externe HDMI-A-1 - 1920x1080)** : Environnement de développement principal (Antigravity IDE / VS Code).
+- **Workspace 3 (Externe HDMI-A-1 - 1920x1080)** : Monitoring & Terminaux (Kitty btop, fastfetch, maintenance).
+- **Workspace 4 (Externe HDMI-A-1 - 1920x1080)** : Communication & Gestionnaire de fichiers (KDE Connect, Kitty yazi).
+- **Workspaces 5-10 (Externe HDMI-A-1)** : Tâches spécialisées (Design Figma, Discord, multimédia, tests).
+- **Workspaces spéciaux (Scratchpads)** :
+  - `Super + U` : **dev-tools** (outils de test temporaires)
+  - `Super + Y` : **notes** (prise de notes rapide)
+  - `Super + I` : **magic** (workspace invisible)
+  - `Super + Shift + Return` : **scratchpad** (terminal flottant rapide)
 
-### **Règles d'assignation par application :**
-- **Workspace 1 💻** : Code, IntelliJ
-- **Workspace 2 🌐** : Firefox, Chrome
-- **Workspace 3 �** : DevTools, Responsive tools
-- **Workspace 4 🖥️** : Terminaux (Kitty, Alacritty)
-- **Workspace 5 🔧** : Docker, Postman, Google Keep
-- **Workspace 6 📚** : Obsidian, documentation
-- **Workspace 7 🎨** : Figma, Draw.io, design
-- **Workspace 8 💬** : Discord, Slack, Teams
-- **Workspace 9 🎵** : Spotify, VLC, YouTube
+### Démarrage automatique :
+- **WS 1 (eDP-1)** : Brave (session précédente + IA Studio) + Obsidian
+- **WS 2 (HDMI-A-1)** : Antigravity IDE
+- **WS 3 (HDMI-A-1)** : Kitty (btop, fastfetch, yay/pacman)
+- **WS 4 (HDMI-A-1)** : KDE Connect + Kitty yazi
+- **Special Scratchpad** : Kitty en tâche de fond accessible instantanément
 
-## 🚀 **Tips workflow :**
+## 🚀 **Tips workflow multi-moniteur :**
 
-1. **Démarrage automatique** : VS Code (WS1) + Brave (WS2) + Terminal (WS4) + Obsidian (WS6) + Draw.io (WS7) + Discord (WS8)
-2. **DevTools persistent** : Utilisez `SUPER+U` pour un accès rapide aux outils
-3. **Terminal flottant** : `SUPER+W` pour commandes rapides
-4. **Navigation fluide** : `SUPER+Tab` pour basculer rapidement
-5. **Screenshots** : `Print` pour capturer du code/UI, `SUPER+Shift+G` pour région
-6. **Vim-style** : `SUPER+H/J/K/L` pour navigation intuitive
-7. **Volume/Luminosité** : `SUPER+=/-` et `SUPER+Shift+=/-` sans touches Fn
-8. **Color Picker** : `SUPER+G` (hex) ou `SUPER+C` (simple) pour design
-9. **Reload rapide** : `SUPER+R` pour tester les changements config
-10. **Verrouillage** : `SUPER+/` pour sécurité rapide
+1. **Démarrage automatique** : Outils IA & Web (WS2-8/second écran)
+2. **Workflow principal** : Développement sur écran principal, outils sur second écran
+3. **DevTools persistent** : `SUPER+U` pour accès rapide aux outils de développement
+4. **Terminal flottant** : `SUPER+W` pour commandes rapides sur n'importe quel écran
+5. **Navigation fluide** : `SUPER+Tab` pour basculer entre workspaces
+6. **Screenshots** : `Print` pour région, `SUPER+Shift+G` pour capture avancée
+7. **Vim-style** : `SUPER+H/J/K/L` pour navigation intuitive des fenêtres
+8. **Volume/Luminosité** : `SUPER+=/-` et `SUPER+Shift+=/-` sans touches Fn
+9. **Color Picker** : `SUPER+G` (hex) ou `SUPER+C` (simple) pour design
+10. **Multi-moniteur** : `SUPER+Shift+O/P` pour déplacer fenêtres entre écrans
+11. **Reload rapide** : `SUPER+R` pour tester changements config
+12. **Verrouillage** : `SUPER+/` pour sécurité rapide
+13. **Débranchement écran** : Tous les workspaces reviennent automatiquement sur l'écran principal
+14. **Rebranchement écran** : Script automatique redistribue les workspaces
 
-## 🎯 **Environnement optimisé :**
-- **Node.js** : 4GB RAM allouée
-- **Wayland native** : Performances optimales
-- **Auto-tiling** : Organisation automatique des fenêtres
-- **Gaps réduits** : Plus d'espace de travail (4px/8px)
-- **Catppuccin** : Thème cohérent et apaisant
-- **Workspaces persistants** : 1-5 toujours disponibles
+## 🎯 **Environnement optimisé multi-moniteur :**
+- **Node.js** : 4GB RAM allouée pour développement
+- **Wayland native** : Performances optimales sur les deux écrans
+- **Auto-tiling** : Organisation automatique des fenêtres sur chaque écran
+- **Gaps réduits** : Plus d'espace de travail (4px/8px) sur les deux écrans
+- **Catppuccin** : Thème cohérent et apaisant sur toute la configuration
+- **Workspaces persistants** : 1-9 toujours disponibles avec assignation automatique
+- **Script intelligent** : Détection automatique des moniteurs au démarrage
+- **Configuration dynamique** : Adaptation automatique selon le nombre d'écrans

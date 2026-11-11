@@ -1,4 +1,4 @@
-# 🎹 Aide-mémoire Clavier - Raccourcis Hyprland
+# 🎹 Aide-mémoire Clavier - Raccourcis Hyprland Multi-Moniteur
 
 ## 📋 **Disposition ergonomique optimisée :**
 
@@ -8,7 +8,7 @@
 │     │ WS1 │ WS2 │ WS3 │ WS4 │ WS5 │ WS6 │ WS7 │ WS8 │ WS9 │     │Vol- │Vol+ │
 ├─────┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴
 │ TAB    │  A  │  Z  │  E  │  R  │  T  │  Y  │  U  │  I  │  O  │  P  │  ^  │  $
-│ WS◀    │Brave│Docker│GitHub│Reload│Float│Notes│DevTool│Magic│Obsidian│   │     │
+│ WS◀    │Brave│Docker│GitHub│Reload│Float│Notes│DevTool│Magic│Mon+ │Mon- │     │
 ├────────┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─────┤
 │ CAPS     │  Q  │  S  │  D  │  F  │  G  │  H  │  J  │  K  │  L  │  M  │ ENTER   │
 │          │Quit │VSCode│Files│Full │Color│Focus│Focus│Focus│Focus│Exit │         │
@@ -40,44 +40,70 @@
 - `G` → Color picker (hex)
 - `C` → Color picker (simple)
 
-### **🟡 Zone jaune (main droite) - Outils**
+### **🟡 Zone jaune (main droite) - Outils & Multi-moniteur**
 - `U` → DevTools workspace
 - `I` → Magic workspace
-- `O` → Obsidian (pas assigné directement)
+- `O` → Déplacer fenêtre vers moniteur suivant (avec Shift)
+- `P` → Déplacer fenêtre vers moniteur précédent (avec Shift)
 - `B` → Brave
 - `N` → Notes/Obsidian
 - `M` → Quitter Hyprland
 
 ### **🔴 Zone rouge (touches numériques) - Workspaces**
-- `&é"'(§è!ç` → Workspaces 1-9 (layout FR)
-- `Shift + touches` → Déplacer fenêtre
-- `Alt + &é"'(` → Déplacer silencieusement (1-4 seulement)
+- `&é"'(§è!çà` → Workspaces 1-10 (layout FR & keycodes 10-19)
+- `Shift + touches` → Déplacer fenêtre vers le workspace
+- `Alt + touches` → Déplacer silencieusement la fenêtre (sans changer de vue)
 
 ## ⚡ **Combinaisons les plus utiles :**
 
+### **🎯 Workflow principal :**
 1. **`SUPER + Space`** → Menu rapide (Rofi)
 2. **`SUPER + Tab`** → Basculer workspace
 3. **`SUPER + H/J/K/L`** → Navigation Vim
 4. **`SUPER + A`** → Navigateur instantané
 5. **`SUPER + S`** → VS Code rapide
-6. **`SUPER + W`** → Terminal flottant
-7. **`SUPER + G`** → Color picker (hex)
-8. **`SUPER + /`** → Verrouillage
-9. **`SUPER + R`** → Reload config
-10. **`Print`** → Screenshot région
-11. **`SUPER + =/-`** → Volume sans Fn
-12. **`SUPER + Shift + =/-`** → Luminosité sans Fn
-13. **`SUPER + ;`** → Toggle split
-14. **`SUPER + ,/.`** → Navigation workspaces
-15. **`SUPER + M`** → Quitter Hyprland
 
-## 💡 **Tips d'ergonomie :**
+### **🖥️ Multi-moniteur (NOUVEAU) :**
+6. **`SUPER + Shift + O`** → Fenêtre vers moniteur suivant
+7. **`SUPER + Shift + P`** → Fenêtre vers moniteur précédent
+8. **`SUPER + Ctrl + O`** → Workspace vers moniteur suivant
+9. **`SUPER + Ctrl + P`** → Workspace vers moniteur précédent
+
+### **🛠️ Outils développement :**
+10. **`SUPER + W`** → Terminal flottant
+11. **`SUPER + G`** → Color picker (hex)
+12. **`SUPER + R`** → Reload config
+13. **`Print`** → Screenshot région
+14. **`SUPER + =/-`** → Volume sans Fn
+15. **`SUPER + Shift + =/-`** → Luminosité sans Fn
+
+## 💡 **Tips d'ergonomie multi-moniteur :**
 
 - **Main gauche** : Applications et actions principales
-- **Main droite** : Outils et workspaces spéciaux
+- **Main droite** : Outils et gestion multi-moniteur
 - **HJKL** : Navigation comme dans Vim (familier pour dev)
-- **Touches françaises** : Workspaces avec les vrais caractères (&é"'(§è!ç)
+- **O/P** : Gestion moniteurs (O = suivant, P = précédent)
+- **Touches françaises** : Workspaces avec vrais caractères (&é"'(§è!ç)
 - **Pas de Fn** : Volume/luminosité avec `=/−` + Shift
 - **Vim-style** : `H/J/K/L` pour déplacement, `Shift+` pour déplacer fenêtre, `Ctrl+` pour redimensionner
-- **Alternatives** : Flèches disponibles comme backup pour la navigation
+- **Alternatives** : Flèches disponibles comme backup pour navigation
 - **Scroll** : `SUPER + scroll` pour changer de workspace
+- **Workflow optimal** : Développement sur écran principal, outils sur second écran
+- **Auto-détection** : Script automatique configure les moniteurs au démarrage
+
+## 🖥️ **Configuration multi-moniteur :**
+
+### **Écran principal (eDP-1 - 1600x900) :**
+- **Workspace 1** : VS Code, développement principal
+- **Position** : Gauche (0x0)
+- **Usage** : Concentration sur le code
+
+### **Second écran (HDMI-A-1 - 1920x1080) :**
+- **Workspaces 2-9** : Navigateurs, outils, communication
+- **Position** : Droite (1600x0)
+- **Usage** : Outils auxiliaires et multitâche
+
+### **Débranchement/Rebranchement :**
+- **Automatique** : Script détecte les changements
+- **Redistribution** : Workspaces se repositionnent intelligemment
+- **Fallback** : Tout revient sur l'écran principal si nécessaire
